@@ -10,6 +10,9 @@ const PACKAGE_ROOT_PATH = process.cwd(),
 module.exports = merge(common, {
     mode: 'production',
     entry: [ENTRY],
+    output: {
+        publicPath: '/secfi'
+    },
     optimization: {
         moduleIds: 'deterministic',
         runtimeChunk: 'single',
