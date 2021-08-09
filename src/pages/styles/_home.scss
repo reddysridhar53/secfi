@@ -1,0 +1,109 @@
+div,
+input {
+    box-sizing: border-box;
+}
+.buttonCtx {
+    padding: 0 12px;
+    border-radius: 18px;
+    height: 36px;
+    align-items: center;
+    color: #ffff;
+    text-transform: capitalize;
+    background: #4364e8;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    border: 1px solid #4364e8;
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+    &:hover {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+.basic-single-select {
+    height: 42px;
+    .select__control {
+        height: 100%;
+    }
+}
+.actions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 100px;
+    gap: 20px;
+    padding: 40px 0 20px;
+    align-items: flex-end;
+    button {
+        @extend .buttonCtx;
+        text-transform: uppercase;
+    }
+}
+
+.exchange-rate-chart {
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-text {
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+    &-actions {
+        button {
+            @extend .buttonCtx;
+            background: unset;
+            &:first-child {
+                margin-right: 8px;
+            }
+            color: #4364e8;
+        }
+    }
+}
+.exchange-rate-chart-main-header {
+    margin: 0;
+    margin-top: 40px;
+}
+.exchange-amount {
+    &-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.5);
+        span {
+            color: #009688;
+            font-weight: 600;
+            font-size: 24px;
+        }
+        div:first-child {
+            margin-right: 16px;
+        }
+    }
+}
+.exchange-rate {
+    &-loading {
+        color: rgaba(0, 0, 0, 0.45);
+        align-items: center;
+        justify-content: center;
+    }
+    &-error {
+        color: red;
+    }
+}
+.square-symbol {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+.tooltip {
+    width: fit-content;
+    border-radius: 6px;
+    box-shadow: 0;
+}
+.tooltip-series-row {
+    display: flex;
+    padding-bottom: 6px;
+    align-items: center;
+}
