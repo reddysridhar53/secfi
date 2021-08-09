@@ -7,6 +7,7 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PACKAGE_ROOT_PATH = process.cwd(),
     SRC = path.resolve(PACKAGE_ROOT_PATH, './src'),
@@ -87,6 +88,7 @@ module.exports = {
             failOnError: true
         }),
         new CompressionPlugin(),
-        new Dotenv({ systemvars: true })
+        new Dotenv({ systemvars: true }),
+        new MiniCssExtractPlugin({filename: "[name].[contenthash].css"})
     ]
 };
