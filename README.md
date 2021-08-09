@@ -1,6 +1,6 @@
-# React Redux with Typescript Boilerplate
+# Secfi frontend task
 
-This boilerplate will help you to quick start your project.
+This is a poc of an excahnge rate converter and viewer.
 
 ## Getting Started
 
