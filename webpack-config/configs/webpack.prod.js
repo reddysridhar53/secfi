@@ -11,7 +11,7 @@ module.exports = merge(common, {
     mode: 'production',
     entry: [ENTRY],
     output: {
-        publicPath: '/secfi'
+        publicPath: '/secfi/'
     },
     optimization: {
         moduleIds: 'deterministic',
